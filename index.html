@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     /* styles.css — modern dark theme, glassmorphism, premium UI + mobile hamburger */
     * {
@@ -588,6 +588,47 @@
 
     /* Form styles removed as the site now uses Calendly booking */
 
+    /* social links */
+    .hero-socials {
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .hero-socials a {
+      font-size: 1.5rem;
+      color: #8dd0ff;
+      transition: all 0.3s ease;
+      opacity: 0.8;
+    }
+
+    .hero-socials a:hover {
+      color: #0af;
+      transform: translateY(-3px) scale(1.1);
+      opacity: 1;
+      text-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-socials a {
+      font-size: 1.4rem;
+      color: #8dd0ff;
+      transition: 0.3s;
+      opacity: 0.7;
+    }
+
+    .footer-socials a:hover {
+      color: #0af;
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
 
     footer {
       text-align: center;
@@ -719,7 +760,12 @@
           <div class="typing-wrapper">
             <span>I'm a </span><span id="typed-text"></span>
           </div>
-          <p class="hero-desc">Senior full-stack engineer with 6+ years of experience building high-performance web apps. I transform ideas into seamless, conversion-focused products.</p>
+          <p class="hero-desc">Senior Solana & Full-Stack Engineer with 6+ years of experience building high-performance Web3 applications and scalable digital products.</p>
+          <div class="social-links hero-socials">
+            <a href="https://www.linkedin.com/in/kariakistephen58/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/SKariaki" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.tiktok.com/@stephenkariaki" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
           <div class="btn-group">
             <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Call</a>
             <a href="#projects" class="btn-outline"><i class="fas fa-arrow-right"></i> View Work</a>
@@ -748,14 +794,12 @@
       <div class="container">
         <h2 class="section-title reveal">Tech Stack & Skills</h2>
         <div class="skills-grid">
-          <div class="skill-card reveal"><i class="fab fa-html5"></i> HTML5/CSS3</div>
-          <div class="skill-card reveal"><i class="fab fa-js"></i> JavaScript (ES2022+)</div>
-          <div class="skill-card reveal"><i class="fab fa-node-js"></i> Node.js</div>
+          <div class="skill-card reveal"><i class="fab fa-ethereum"></i> Solana / Web3</div>
+          <div class="skill-card reveal"><i class="fas fa-link"></i> Smart Contracts</div>
           <div class="skill-card reveal"><i class="fab fa-react"></i> React / Next.js</div>
+          <div class="skill-card reveal"><i class="fab fa-node-js"></i> Node.js</div>
           <div class="skill-card reveal"><i class="fas fa-cloud"></i> APIs / Backend</div>
-          <div class="skill-card reveal"><i class="fas fa-palette"></i> UI/UX Design</div>
-          <div class="skill-card reveal"><i class="fas fa-database"></i> MongoDB / PostgreSQL</div>
-          <div class="skill-card reveal"><i class="fab fa-git-alt"></i> Git & CI/CD</div>
+          <div class="skill-card reveal"><i class="fas fa-database"></i> PostgreSQL / MongoDB</div>
         </div>
       </div>
     </section>
@@ -877,13 +921,18 @@
   </main>
 
   <footer>
-    <p>© 2026 Stephen Kariaki — Built with <i class="fas fa-heart" style="color:#0af;"></i> for modern web</p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/kariakistephen58/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/SKariaki" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.tiktok.com/@stephenkariaki" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p>© 2026 Stephen Kariaki — Solana & Web3 Engineer</p>
   </footer>
 
   <script>
     (function() {
       // ----- 1. Typing effect
-      const roles = ["Frontend Dev", "Backend Engineer", "Full-Stack Architect", "UI/UX Enthusiast"];
+      const roles = ["Solana Developer", "Web3 Engineer", "Full-Stack Architect", "UI/UX Enthusiast"];
       let roleIndex = 0, charIndex = 0, isDeleting = false;
       const typedElement = document.getElementById("typed-text");
       let typingSpeed = 100;
